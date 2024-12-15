@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: src/component/History.jsx
+  checksum: 1e60ccb0d65c5e8217ef78b0e2cd1807b5a017b437f355021cfa79b5eb8562e4
+version: ""
