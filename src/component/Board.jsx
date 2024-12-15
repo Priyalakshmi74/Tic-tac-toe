@@ -1,12 +1,22 @@
 import React, {useState} from 'react';
 import Square from "./Square";
 import '../style.css';
+import {calculateNextValue, calculateWinner} from "../utils";
+
 
 function Board() {
     const [squares, setSquares] = useState(Array(9).fill(null));
 
+    const nextValue = calculateNextValue(squares);
+    const winner = calculateWinner(squares);
+
     const handleSquareClick = (index) => {
-        console.log(index);
+        if (winner || squares[index] !== null) return;
+
+        const newSquares = [...squares];
+        newSquares[index] = nextValue;
+        setSquares(newSquares);
+
     };
 
     const renderSquares = () => {
