@@ -1,6 +1,9 @@
 import React from 'react';
 
 export const History = ({ history, jumpToMove }) => {
+    if (history.length <= 1) {
+        return null;
+    }
 
     return (
         <div className="history">
