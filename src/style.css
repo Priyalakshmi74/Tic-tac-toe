@@ -37,3 +37,9 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+.status {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+}

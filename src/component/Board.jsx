@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Square from "./Square";
 import '../style.css';
 import {calculateNextValue, calculateWinner} from "../utils";
+import Status from "./Status";
 
 
 function Board() {
@@ -30,6 +31,7 @@ function Board() {
     return (
         <div className="board">
             <h1>Tic-Tac-Toe</h1>
+            <Status winner={winner} nextValue={nextValue} squares={squares}/>
             <div className="grid">
                 {renderSquares()}
             </div>
